@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ds-2020" target="13" />
+      <module name="ds-2020" target="15" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -19,6 +19,8 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import static transaction.TransactionService.THRESHOLD_LIMIT;
+
 public class PeerServer implements PeerService<Block, Transaction, TransactionData>
 {
     private final List<Peer> connectedPeers = new ArrayList<>();
@@ -96,8 +98,8 @@ public class PeerServer implements PeerService<Block, Transaction, TransactionDa
         Logger.getInstance().info(SERVICE_NAME, peerID, "Receiving new transaction: " + transaction.toString());
 
         if (! transactionService.storeTransaction(transaction)) return;
-
-        if (transactionService.getThresholdTransactions().size() == TransactionService.THRESHOLD_LIMIT)
+        System.out.println(THRESHOLD_LIMIT);
+        if (transactionService.getThresholdTransactions().size() == THRESHOLD_LIMIT)
         {
             Logger.getInstance().info(SERVICE_NAME, peerID,"Reached maximal transactions");
 

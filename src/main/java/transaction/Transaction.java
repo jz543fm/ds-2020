@@ -16,7 +16,7 @@ public class Transaction<T> implements Serializable {
 
     @Override
     public String toString() {
-        return ("[ Creator: " + peerID + ", Timestamp: " + creationDate.toString() + ", Data: " + transactionData.toString() + " ]");
+        return ("[ -> Creator of transaction: " + peerID + ", Timestamp: " + creationDate.toString() + ", Data: " + transactionData.toString() + " ]" );
     }
 
     public T getTransactionData() {
