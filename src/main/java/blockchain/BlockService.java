@@ -3,8 +3,9 @@ package blockchain;
 import java.rmi.Remote;
 import java.util.List;
 
-public interface BlockService<T,D> extends Remote {
 
+public interface BlockService<T,D> extends Remote
+{
     String SERVICE_NAME = "BlockService";
 
     List<T> getBlocks();
@@ -13,5 +14,5 @@ public interface BlockService<T,D> extends Remote {
     boolean storeBlock(T block);
     boolean verifyBlock(T block);
     void updateBlocks(List<T> blocks);
-
 }
+

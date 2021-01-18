@@ -1,8 +1,0 @@
-blockchain\BlockService.class
-transaction\Transaction.class
-peer\Peer.class
-blockchain\Block.class
-blockchain\BlockProvider.class
-peer\PeerService.class
-peer\PeerServer.class
-transaction\TransactionData.class

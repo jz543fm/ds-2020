@@ -2,8 +2,8 @@ package peer;
 
 import java.io.Serializable;
 
-public class Peer implements Serializable {
-
+public class Peer implements Serializable
+{
     private String INET_ADDRESS;
     private int port;
 
@@ -32,5 +32,4 @@ public class Peer implements Serializable {
     public String toString() {
         return ("[ " + INET_ADDRESS + ":" + port  +" ]");
     }
-
 }

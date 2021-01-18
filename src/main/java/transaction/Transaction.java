@@ -3,8 +3,7 @@ package transaction;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Transaction<T> implements Serializable
-{
+public class Transaction<T> implements Serializable {
     private final Date creationDate;
     private final T transactionData;
     private final int peerID;
@@ -28,6 +27,7 @@ public class Transaction<T> implements Serializable
         return creationDate;
     }
 
-    public int getPeerID() { return peerID; }
+    public int getPeerID() {
+        return peerID;
+    }
 }
-
