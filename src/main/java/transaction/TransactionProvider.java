@@ -93,7 +93,7 @@ public class TransactionProvider implements TransactionService<Transaction, Tran
 
         Transaction transaction = new Transaction<>(peerID, transactionData);
         Logger.getInstance().info(SERVICE_NAME, this.peerID, "Generate new transaction: " + transaction.toString());
-
+        System.out.print(getTransactions().size());
         return transaction;
     }
 

@@ -3,13 +3,15 @@ package blockchain;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
 public class Block<T> implements Serializable
 {
     private final Date creationDate;
-
+    private final String DATE_FORMAT = "HH:mm:ss.SSS";
+    private String getTimeFormat() { return new SimpleDateFormat(DATE_FORMAT).format(new Date()); }
     private int ID;
     private List<T> transactions;
     private byte[] previousHash;
@@ -33,7 +35,7 @@ public class Block<T> implements Serializable
 
     @Override
     public String toString() {
-        return ("[ ID: " + ID + ", previousHash: " + DigestUtils.sha256Hex(previousHash) + ", currentHash: " + DigestUtils.sha256Hex(currentHash) + " ]");
+        return ("Timestamp -> " + getTimeFormat() + " --> || Block ID: " + ID + " ||,  HashCode: " + DigestUtils.sha256Hex(previousHash) + ", ActualHashcode: " + DigestUtils.sha256Hex(currentHash) + " || <-- ");
     }
 
     public byte[] getPreviousHash() {

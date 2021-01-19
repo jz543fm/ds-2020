@@ -39,6 +39,7 @@ public class BlockProvider implements BlockService<Block, Transaction>
             this.blocks.add(new Block<Transaction>(new Date(0), 0x00, new ArrayList<>(), new byte[0]));
             Logger.getInstance().info(SERVICE_NAME, peerID, "Creating new blocks");
         }
+
     }
 
     @Override
